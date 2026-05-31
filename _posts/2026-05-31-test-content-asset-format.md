@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "测试页：内容资产库的文章格式"
-date: 2026-06-01 10:00:00 +0800
+date: 2026-05-31 11:00:00 +0800
 categories: ["随笔"]
 tags: ["测试", "内容资产", "AI", "写作"]
 description: "这是一篇临时测试文章，用来检查东逻辑内容资产库的标题、摘要、标签、正文层级、列表、引用和行动清单等基础文章格式。"
 lang: zh-CN
 weekly: true
-week: 2026-06-01
+week: 2026-05-31
 permalink: /notes/test-content-asset-format/
 ---
 
