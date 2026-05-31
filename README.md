@@ -1,4 +1,4 @@
-# Dong Luo Ji Open Content Repository
+# 董逻辑 Open Content Repository
 
 这是 `dongluoji.github.io` 的源码仓库，用来建设一个长期增长的个人开源内容库。
 

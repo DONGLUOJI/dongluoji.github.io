@@ -1,12 +1,12 @@
-title: Dong Luo Ji
+title: 董逻辑
 description: >-
-  Dong Luo Ji 的开源内容库，长期记录 AI 实践、赚钱项目、自动化工作流和个人认知。
+  董逻辑的开源内容库，长期记录 AI 实践、赚钱项目、自动化工作流和个人认知。
 baseurl: ""
 url: "https://dongluoji.github.io"
 
 author:
   name: Dong Luo Ji
-  name_zh: 东逻辑
+  name_zh: 董逻辑
   github: dongluoji
 
 lang: zh-CN
