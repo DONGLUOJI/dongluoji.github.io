@@ -1,0 +1,55 @@
+---
+layout: default
+title: 首页
+---
+
+<section class="home-hero" aria-labelledby="home-title">
+  <div class="home-copy">
+    <p class="eyebrow">Open Content Repository</p>
+    <h1 id="home-title">东逻辑的开源内容库</h1>
+    <p>长期记录 AI 实践、赚钱项目、自动化工作流和个人认知。网页负责阅读，GitHub 仓库负责开源、下载和版本追踪。</p>
+    <div class="hero-actions">
+      <a class="primary-link-button" href="{{ '/notes/' | relative_url }}">阅读随笔</a>
+      <a class="secondary-link-button" href="{{ '/resources/' | relative_url }}">查看资源</a>
+    </div>
+  </div>
+
+  <aside class="code-panel" aria-label="内容仓库信息">
+    <div class="code-tabs">
+      <span class="is-active">Content</span>
+      <span>AI</span>
+      <span>Projects</span>
+      <span class="copy-mark">□</span>
+    </div>
+    <div class="code-body">
+      <div><span>1</span><code>const name = <b>"Dong Luo Ji"</b></code></div>
+      <div><span>2</span><code>const repo = <b>"dongluoji.github.io"</b></code></div>
+      <div class="is-highlighted"><span>3</span><code>const format = <b>"open content"</b></code></div>
+      <div><span>4</span><code>const topics = <b>["AI", "money", "workflow"]</b></code></div>
+      <div><span>5</span><code>const publish = <b>true</b></code></div>
+    </div>
+  </aside>
+</section>
+
+<section class="home-list-section">
+  <header class="section-head">
+    <div>
+      <p class="eyebrow">Latest Notes</p>
+      <h2>最新文章</h2>
+    </div>
+    <a href="{{ '/notes/' | relative_url }}">全部随笔</a>
+  </header>
+
+  <div class="post-list">
+    {% for post in site.posts limit: 10 %}
+    <article class="post-row">
+      <div>
+        <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+      <a class="read-link" href="{{ post.url | relative_url }}">阅读</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>

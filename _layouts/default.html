@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != '首页' %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} 首页">
+        <span class="brand-mark">DLJ</span>
+        <span>{{ site.author.name_zh }}</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a {% if page.url == '/' %}class="is-active"{% endif %} href="{{ '/' | relative_url }}">首页</a>
+        <a {% if page.url contains '/notes/' %}class="is-active"{% endif %} href="{{ '/notes/' | relative_url }}">随笔</a>
+        <a {% if page.url contains '/resources/' %}class="is-active"{% endif %} href="{{ '/resources/' | relative_url }}">资源</a>
+        <a {% if page.url contains '/about/' %}class="is-active"{% endif %} href="{{ '/about/' | relative_url }}">关于</a>
+        <a class="nav-github" href="https://github.com/{{ site.author.github }}/{{ site.author.github }}.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>{{ site.title }} · 开源内容库</p>
+      <div class="footer-links">
+        <a href="{{ '/notes/' | relative_url }}">随笔</a>
+        <a href="{{ '/resources/' | relative_url }}">资源</a>
+        <a href="https://github.com/{{ site.author.github }}/{{ site.author.github }}.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
