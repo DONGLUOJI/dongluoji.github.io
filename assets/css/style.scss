@@ -161,7 +161,6 @@ li {
   text-transform: uppercase;
 }
 
-.home-copy h1,
 .page-header h1,
 .resource-intro h1,
 .post-header h1 {
@@ -170,6 +169,15 @@ li {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 760;
   line-height: 1.08;
+}
+
+.home-copy h1 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(2rem, 3.2vw, 2.72rem);
+  font-weight: 760;
+  line-height: 1.08;
+  white-space: nowrap;
 }
 
 .home-copy p:not(.eyebrow),
@@ -439,11 +447,15 @@ li {
     padding-top: 30px;
   }
 
-  .home-copy h1,
   .page-header h1,
   .resource-intro h1,
   .post-header h1 {
     font-size: 1.85rem;
+  }
+
+  .home-copy h1 {
+    font-size: 1.72rem;
+    white-space: normal;
   }
 
   .code-tabs {
